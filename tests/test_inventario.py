@@ -1,5 +1,5 @@
 import pytest
-from src.inventario import clasificar_stock
+from src.inventario import clasificar_stock, detectar_sobrestock
 
 
 def test_stock_agotado():
@@ -21,3 +21,12 @@ def test_stock_normal():
 def test_stock_invalido():
     with pytest.raises(ValueError):
         clasificar_stock(-2, 20)
+
+def test_sobrestock_verdadero():
+    # Si el stock mínimo es 20, el doble (umbral) es 40. Si hay 50, hay sobrestock.
+    assert detectar_sobrestock(50, 20) is True
+
+
+def test_sobrestock_falso():
+    # Si el stock mínimo es 20, el doble es 40. Si hay 30, no hay sobrestock.
+    assert detectar_sobrestock(30, 20) is False

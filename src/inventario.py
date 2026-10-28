@@ -11,3 +11,7 @@ def clasificar_stock(stock_actual: int, stock_minimo: int) -> str:
     if stock_actual <= stock_minimo:
         return "BAJO"
     return "NORMAL"
+def detectar_sobrestock(stock_actual: int, stock_minimo: int, umbral: float = 2.0) -> bool:
+    if stock_minimo <= 0:
+        raise ValueError("El stock mínimo debe ser mayor que cero")
+    return stock_actual > stock_minimo * umbral
