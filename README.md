@@ -5,7 +5,6 @@
 ### 🚀 Repositorio de práctica y evaluación
 
 ![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![Estado](https://img.shields.io/badge/Estado-En%20desarrollo-success?style=for-the-badge)
 ![Uso](https://img.shields.io/badge/Uso-Académico-blueviolet?style=for-the-badge)
 
 </div>
